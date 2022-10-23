@@ -1,4 +1,4 @@
-## Introduction to CI/CD and GitLab:
+## Introduction to CI/CD and GitLab
 
 ### What is CI/CD:
 1. CD part (3 stages): Continuous Deployment (or Continuous Delivery) = Development + Testing + Production
