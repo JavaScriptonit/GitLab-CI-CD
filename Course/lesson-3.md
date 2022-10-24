@@ -1,4 +1,6 @@
 ## Core concepts of GitLab CI/CD
+[Nana Janashia Project "mynodeapp-cicd-project" Fork](https://gitlab.com/JavaScriptonit/mynodeapp-cicd-project)\
+[GitLab Pipelines](https://gitlab.com/JavaScriptonit/mynodeapp-cicd-project/-/pipelines)
 
 ### Pipeline is scripted:
 1. Whole logic is scripted in YAML format (.gitlab-ci.yml)
