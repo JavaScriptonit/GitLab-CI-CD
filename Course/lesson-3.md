@@ -21,3 +21,11 @@
 5. Stages
    1. You can group multiple jobs into stages that run in a defined order
    2. Multiple jobs in the same stage are executed in parallel
+   3. Execute jobs in certain order within a stage:
+      1. use "needs" in job - to have a dependency 
+      2. make a bash script in .sh file with linux commands
+         1. chmod +x prepare-tests.sh - change mode to executable
+         2. ./prepare-tests.sh - execute file
+   4. Separate jobs for different branches:
+      1. use "only" / "except" to control when jobs are executed
+      2. 
