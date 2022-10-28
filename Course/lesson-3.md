@@ -12,6 +12,12 @@
    4. Must contain at least the script clause
    5. script specify the commands to execute
 3. Pipeline (\GitLabCICD\.gitlab-ci.yml):
-   1. run_tests
-   2. build_image
-   3. push_image
+   1. run_tests (stage 1)
+   2. build_image (stage 2)
+   3. push_image (stage 3)
+4. Pipeline logic becomes part of application code. 
+   1. GitLab auto detects .gitlab-ci.yml and run any logic written there
+   2. Is the whole workflow process or the CI/CD process
+5. Stages
+   1. You can group multiple jobs into stages that run in a defined order
+   2. Multiple jobs in the same stage are executed in parallel
