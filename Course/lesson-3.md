@@ -28,4 +28,6 @@
          2. ./prepare-tests.sh - execute file
    4. Separate jobs for different branches:
       1. use "only" / "except" to control when jobs are executed
-      2. 
+   5. Configure the whole pipeline behavior:
+      1. use "workfkow:rules" - controls whether or not the whole pipeline is created
+      2. use GitLab variables = $CI_COMMIT_BRANCH != "main" - to avoid "only: - main"

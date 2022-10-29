@@ -1,3 +1,9 @@
+workflow:
+  rules:
+    - if: $CI_COMMIT_BRANCH != "main"
+      when: never
+    - when: always
+
 stages:
   - test
   - build
@@ -26,16 +32,12 @@ run_lint_tests:
     - ls
 
 build_image:
-  only:
-    - main
   stage: build
   script:
     - echo "Building the Docker image..."
     - echo "Tagging the Docker image..."
 
 push_image:
-  only:
-    - main
   stage: build
   needs:
     - build_image
@@ -44,8 +46,6 @@ push_image:
     - echo "Pushing Docker image to registry..."
 
 deploy_image:
-  only:
-    - main
   stage: deploy
   script:
     - echo "Deploying new Docker image to dev server..."
