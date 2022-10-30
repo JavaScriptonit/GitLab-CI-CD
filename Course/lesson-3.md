@@ -31,3 +31,5 @@
    5. Configure the whole pipeline behavior:
       1. use "workfkow:rules" - controls whether or not the whole pipeline is created
       2. use GitLab variables = $CI_COMMIT_BRANCH != "main" - to avoid "only: - main"
+      3. use GitLab variable = $CI_PIPELINE_SOURCE != "merge_request_event" - to execute pipeline for a feature branch
+      4. Resources: [Predefined GitLab Variables](https://docs.gitlab.com/ee/ci/variables/predefined_variables.html)
