@@ -33,3 +33,11 @@
       2. use GitLab variables = $CI_COMMIT_BRANCH != "main" - to avoid "only: - main"
       3. use GitLab variable = $CI_PIPELINE_SOURCE != "merge_request_event" - to execute pipeline for a feature branch
       4. Resources: [Predefined GitLab Variables](https://docs.gitlab.com/ee/ci/variables/predefined_variables.html)
+   6. Project variables
+      1. Stored outside the Git repository (not on the .gitlab-ci.yml)
+      2. Ideal for tokens and passwords, which should not be included in the repository
+      3. GitLab -> Project -> Settings -> CI/CD -> Variables -> Add variable
+         1. [cicd-project settings](https://gitlab.com/JavaScriptonit/mynodeapp-cicd-project/-/settings/ci_cd)
+   7. Use local variables in .gitlab-ci.yml as $image_repository:$image_tag
+      1. [cicd-project .gitlab-ci.yml file](https://gitlab.com/JavaScriptonit/mynodeapp-cicd-project/-/blob/main/.gitlab-ci.yml)
+      2. Should store only non-sensitive data because will be visible in the repository
