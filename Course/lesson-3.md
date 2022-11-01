@@ -1,6 +1,7 @@
 ## Core concepts of GitLab CI/CD
 [Nana Janashia Project "mynodeapp-cicd-project" Fork](https://gitlab.com/JavaScriptonit/mynodeapp-cicd-project)\
-[GitLab Pipelines](https://gitlab.com/JavaScriptonit/mynodeapp-cicd-project/-/pipelines)
+[GitLab Pipelines](https://gitlab.com/JavaScriptonit/mynodeapp-cicd-project/-/pipelines)\
+[joinbet-front-nx/pull/189/checks](https://github.com/joinbet/joinbet-front-nx/pull/189/checks) - Наглядный пример test stage в рабочем проекте при merge feature branch
 
 ### Pipeline is scripted:
 1. Whole logic is scripted in YAML format (.gitlab-ci.yml)
