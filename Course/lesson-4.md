@@ -13,5 +13,5 @@
    6. SSH executor
    7. Parallels executor
    8. VirtualBox executor
-5. To make multiple executors on the same host or the same server - register multiple runners on the same host
-To have 10 runners on 1 machine with its own executor
+5. To make multiple executors on the same host or the same server - register multiple runners on the same host\
+To have 10 runners on 1 machine with its own executor - [GitLab Executors](https://techworld-with-nana.teachable.com/courses/1769488/lectures/39894185)
