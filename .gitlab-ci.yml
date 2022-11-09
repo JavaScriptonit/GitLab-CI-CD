@@ -1,3 +1,5 @@
+image: node:17-alpine
+
 workflow:
   rules:
     - if: $CI_COMMIT_BRANCH != "main" && $CI_PIPELINE_SOURCE != "merge_request_event"
@@ -19,6 +21,7 @@ run_unit_tests:
     - echo "Preparing test data..."
   script:
     - echo "Running unit tests for $MICRO_SERVICE_NAME ..."
+    - npm version
   after_script:
     - echo "Cleaning up temporary files..."
 
