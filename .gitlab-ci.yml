@@ -1,4 +1,4 @@
-image: node:17-alpine
+image: alpine:3.15.1
 
 workflow:
   rules:
@@ -16,6 +16,7 @@ variables:
   image_tag: v1.0
 
 run_unit_tests:
+  image: node:17-alpine3.14
   stage: test
   before_script:
     - echo "Preparing test data..."

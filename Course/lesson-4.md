@@ -28,8 +28,8 @@ To have 10 runners on 1 machine with its own executor - [GitLab Executors](https
    3. Docker Machine Executors are used for them
       1. `Preparing the "docker+machine" executor` - in Job logs: type, name of executor
 8. **Scope of Runners:**
-   1. Shared Runners - available to all groups and projects in a GitLab instance
+   1. Shared Runners - available to all groups and projects in a GitLab instance (managed by GitLab)
    2. Group Runners - available to all projects in a group
-   3. Specific Runners - associated with a specific project
+   3. Specific Runners - associated with a specific project (self-managed)
 9. **Specify a Docker image that the jobs runs in:**
-   1. "image"
+   1. "image: node:17-alpine" with a specific version
