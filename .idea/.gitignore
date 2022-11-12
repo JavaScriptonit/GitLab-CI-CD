@@ -11,3 +11,7 @@ vcs.xml
 modules.xml
 GitLabCICD.iml
 .idea
+
+# AWS secret files
+new_user_credentials.csv
+gitlab-runner-key.pem
