@@ -23,7 +23,7 @@ To install GitLab Runner using Homebrew:
    1. Enter the GitLab instance URL\
       https://gitlab.com/
    2. Enter the registration token:\
-      GR1348941c8-hse4jkvJn1E1yaWpC - from [settings/ci_cd](https://gitlab.com/JavaScriptonit/mynodeapp-cicd-project/-/settings/ci_cd)
+      GR1348941c8-hse4jkvJn1E1y**** - from [settings/ci_cd](https://gitlab.com/JavaScriptonit/mynodeapp-cicd-project/-/settings/ci_cd)
    3. Enter a description for the runner:\
       local-runner
    4. Enter tags for the runner (comma-separated):\

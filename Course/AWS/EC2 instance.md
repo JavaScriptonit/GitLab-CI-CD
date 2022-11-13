@@ -11,8 +11,8 @@
 * Make sure you have your current IP on there and update to be sure it hasn't changed
 * Make sure the key pair you're attempting to use corresponds to the one attached to your EC2
 * Make sure your key pair on your local machine is chmod'ed correctly. I believe it's chmod 600 keypair.pem check this
-  * $ chmod 400 gitlab-runner-key.pem
-  * $ ssh -i ~/Downloads/gitlab-runner-key.pem ubuntu@ec2-44-203-114-204.compute-1.amazonaws.com
+  * `$ chmod 400 gitlab-runner-key.pem`
+  * `$ ssh -i ~/Downloads/gitlab-runner-key.pem ubuntu@ec2-44-203-114-204.compute-1.amazonaws.com`
 * Make sure you're in either your .ssh folder on your host OR correctly referencing it: HOME/.ssh/key.pem
 * Last weird totally wishy-washy checks:
   * reboot instance

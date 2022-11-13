@@ -33,3 +33,6 @@ To have 10 runners on 1 machine with its own executor - [GitLab Executors](https
    3. Specific Runners - associated with a specific project (self-managed)
 9. **Specify a Docker image that the jobs runs in:**
    1. "image: node:17-alpine" with a specific version
+10. **Multiple Runners:**
+    1. 1 job runs on a specific runner with configured setup for that job (**flexibility**)
+    2. Multiple runners with the same configuration for jobs when 1 of that runners fails (**scalability**)
