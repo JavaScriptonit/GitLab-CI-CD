@@ -18,3 +18,13 @@ pre steps:
 * `$ sudo gitlab-runner -start` - restart runner
 * `$ sudo apt install nodejs` - after adding tags to any job in .gitlab-ci.yml
 * `$ sudo apt install npm` - after adding tags to any job in .gitlab-ci.yml
+
+pre steps:
+`$ ssh -i ~/Downloads/gitlab-runner-key.pem ubuntu@ec2-44-204-20-127.compute-1.amazonaws.com` - open CI in terminal
+
+### Register new Runner:
+* `$ sudo apt install docker.io` - install Docker on EC2
+* `$ sudo docker ps` - use "sudo" to run Docker commands after install Docker
+* `$ sudo usermod -aG docker $USER` - [Add your user to the docker group](https://docs.docker.com/engine/install/linux-postinstall/)
+* `$ exit` - necessary to restart the virtual machine for changes to take effect
+* 

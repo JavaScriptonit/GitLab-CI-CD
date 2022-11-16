@@ -16,11 +16,11 @@ variables:
   image_tag: v1.0
 
 run_unit_tests:
+  image: node:17-alpine3.14
   tags:
     - ec2
-    - aws
+    - docker
     - remote
-  image: node:17-alpine3.14
   stage: test
   before_script:
     - echo "Preparing test data..."
@@ -33,7 +33,7 @@ run_unit_tests:
 run_lint_tests:
   tags:
     - ec2
-    - aws
+    - shell
     - remote
   stage: test
   before_script:
