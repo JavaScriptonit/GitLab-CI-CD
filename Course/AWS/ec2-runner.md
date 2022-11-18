@@ -27,4 +27,14 @@ pre steps:
 * `$ sudo docker ps` - use "sudo" to run Docker commands after install Docker
 * `$ sudo usermod -aG docker $USER` - [Add your user to the docker group](https://docs.docker.com/engine/install/linux-postinstall/)
 * `$ exit` - necessary to restart the virtual machine for changes to take effect
-* 
+
+### Group Runners:
+* Create a group in GitLab
+* Create Runners the same way as for a project [gitlab.com/groups/runners](https://gitlab.com/groups/my-super-online-shop55/-/runners)
+* Add projects to a Group
+* Set Runners in CI/CD or [Settings](https://gitlab.com/groups/my-super-online-shop55/-/settings/ci_cd)
+* Works the same was as Specific Runners but for a Group of projects
+
+### GitLab Runner Versions
+* GitLab Instance and GitLab Runner - 2 separate programs with their own versions
+* They should stay in sync: 14.10 version === 14.10 version to work properly
