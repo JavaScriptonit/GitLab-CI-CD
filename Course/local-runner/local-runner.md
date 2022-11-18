@@ -42,6 +42,10 @@ To install GitLab Runner using Homebrew:
 5. [Install and Register Windows Runner](https://techworld-with-nana.teachable.com/courses/1769488/lectures/39895937)
 
 
-6. 
+6. Stop GitLab Runner:
+* `brew services info gitlab-runner ` - brew services info
+* `brew services list` - brew services status check
+* `brew services stop gitlab-runner` - Stopping gitlab-runner
+* 
 
 
