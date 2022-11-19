@@ -43,7 +43,7 @@ To install GitLab Runner using Homebrew:
 
 
 6. Stop GitLab Runner:
-* `brew services info gitlab-runner ` - brew services info
+* `brew services info gitlab-runner` - brew services info
 * `brew services list` - brew services status check
 * `brew services stop gitlab-runner` - Stopping gitlab-runner
 * 
