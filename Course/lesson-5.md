@@ -9,3 +9,7 @@
 * Promote to STAGING
 * Promote to PROD
 
+### Show reports in GitLab UI (.gitlab-ci.yml):
+* use `artifacts:reports:` - to add reports to the Job
+* use `junit: app/junit.xml` - to use xml created by jest library
+* use `paths: - app/junit.xml` - additional artifact of reports to **DOWNLOAD**
