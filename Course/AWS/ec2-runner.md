@@ -12,7 +12,7 @@ pre steps:
     * url - https://gitlab.com/
     * token - GR1348941c8-hse4jkvJn1E1y****
     * desc - ec2-runner
-    * tags - ec2, aws, remote
+    * tags - ec2, shell, remote
     * note - The runner is using shell executor
     * executor - shell
 * `$ sudo gitlab-runner -start` - restart runner

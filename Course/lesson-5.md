@@ -13,3 +13,11 @@
 * use `artifacts:reports:` - to add reports to the Job
 * use `junit: app/junit.xml` - to use xml created by jest library
 * use `paths: - app/junit.xml` - additional artifact of reports to **DOWNLOAD**
+
+### Packages & Registries:
+* Package Registry
+  * Use GitLab as a private or public registry for variety of supported package managers
+* Container Registry
+  * Registry to store Docker images
+* Infrastructure Registry 
+  * Private registry for laC packages
