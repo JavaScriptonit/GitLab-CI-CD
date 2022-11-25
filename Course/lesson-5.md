@@ -17,7 +17,10 @@
 ### Packages & Registries:
 * Package Registry
   * Use GitLab as a private or public registry for variety of supported package managers
-* Container Registry
+* [Container Registry](https://gitlab.com/JavaScriptonit/mynodeapp-cicd-project/container_registry)
   * Registry to store Docker images
+  * Has all microservices on the project
+  * Has all tags for each microservice
+    * [Example - microservice/shopping-cart](https://gitlab.com/JavaScriptonit/mynodeapp-cicd-project/container_registry/3663922)
 * Infrastructure Registry 
   * Private registry for laC packages

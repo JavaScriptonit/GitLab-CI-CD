@@ -16,8 +16,8 @@ Enable Docker commands in your CI/CD jobs:
     * Install GitLab Runner
     * Register a runner. Select the shell executor
     * On the server where GitLab Runner is installed, install Docker Engine. View a list of supported platforms
-    * Add the gitlab-runner user to the docker group: `sudo usermod -aG docker gitlab-runner`
-    * Verify that gitlab-runner has access to Docker: `sudo -u gitlab-runner -H docker info`
+    * Add the gitlab-runner user to the docker group: `$ sudo usermod -aG docker gitlab-runner`
+    * Verify that gitlab-runner has access to Docker: `$ sudo -u gitlab-runner -H docker info`
     * In GitLab, to verify that everything works, add docker info to .gitlab-ci.yml: 
       * `before_script:`
       * `- docker info`
@@ -27,3 +27,7 @@ Enable Docker commands in your CI/CD jobs:
       * `- docker run my-docker-image /script/to/run/tests`
 
 ### [Job succeeded. Logs:](https://gitlab.com/JavaScriptonit/mynodeapp-cicd-project/-/jobs/3371676279)
+
+gitlab-runner check: `$ groups gitlab-runner`
+* gitlab-runner : gitlab-runner
+* gitlab-runner : gitlab-runner docker
