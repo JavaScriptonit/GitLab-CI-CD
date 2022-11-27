@@ -24,3 +24,8 @@
     * [Example - microservice/shopping-cart](https://gitlab.com/JavaScriptonit/mynodeapp-cicd-project/container_registry/3663922)
 * Infrastructure Registry 
   * Private registry for laC packages
+
+### Deploy with Docker-compose:
+* Useful when run multiple containers
+* Everything is defined in one YAML file
+* Spin UP all containers and tear DOWN in 1 single command

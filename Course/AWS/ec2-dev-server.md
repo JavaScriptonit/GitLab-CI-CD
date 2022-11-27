@@ -22,4 +22,21 @@
 14. Open Public IPv4 address:3000 or Public IPv4 DNS:3000
     * `http://54.91.111.16:3000/`
     * `http://ec2-54-91-111-16.compute-1.amazonaws.com:3000/`
+15. Add environment to deploy stage
+    * `name: development` - name of environment
+    * `url: $DEV_ENDPOINT` - http://ec2-54-165-186-129.compute-1.amazonaws.com:3000
+    * GitLab provides a full history of deployments of each env
+    * You always know what is deployed on servers
+    * [GitLab environments URL](https://gitlab.com/JavaScriptonit/mynodeapp-cicd-project/-/environments)
+16. Create docker-compose.yaml:
+    * `version: "3.3"` - latest version of docker-compose
+    * `services: app:` - list of services
+    * `image: registry.gitlab.com/javascriptonit/mynodeapp-cicd-project:1.2` - latest image
+    * `ports: - 3000:3000` - host port and container port
+17. Update .gitlab-ci.yaml:
+    * add script commands:
+      * `- scp -o StrictHostKeyChecking=no -i $SSH_PRIVATE_KEY ./docker-compose.yaml ubuntu@$DEV_SERVER_HOST:/home/ubuntu` - to copy docker-compose file from gitlab runner to dev-server
+      * `docker-compose -f docker-compose.yaml down` - stop running images
+      * `docker-compose -f docker-compose.yaml up -d"` - run new image after commit
+18. 
 
