@@ -27,5 +27,5 @@
 
 ### Deploy with Docker-compose:
 * Useful when run multiple containers
-* Everything is defined in one YAML file
-* Spin UP all containers and tear DOWN in 1 single command
+* Everything is defined in one YAML [file](https://gitlab.com/JavaScriptonit/mynodeapp-cicd-project/-/blob/main/docker-compose.yaml)
+* Spin UP all containers and tear DOWN in 1 single [command](/Users/andreyshabunov/PhpstormProjects/GitLab-CI-CD/Course/AWS/ec2-dev-server.md)
