@@ -34,9 +34,15 @@
     * `image: registry.gitlab.com/javascriptonit/mynodeapp-cicd-project:1.2` - latest image
     * `ports: - 3000:3000` - host port and container port
 17. Update .gitlab-ci.yaml:
-    * add script commands:
+    * add script commands for using dc file and running it:
       * `- scp -o StrictHostKeyChecking=no -i $SSH_PRIVATE_KEY ./docker-compose.yaml ubuntu@$DEV_SERVER_HOST:/home/ubuntu` - to copy docker-compose file from gitlab runner to dev-server
       * `docker-compose -f docker-compose.yaml down` - stop running images
       * `docker-compose -f docker-compose.yaml up -d"` - run new image after commit
-18. 
+    * add script command for versioning:
+      * `cat app/package.json | jq -r .version` - get version value from package.json object
+      * `- export PACKAGE_JSON_VERSION=$(cat app/package.json | jq -r .version)` - full command with saving version variable
+      * `- export VERSION=$PACKAGE_JSON_VERSION.$CI_PIPELINE_IID` - change 3 patch numbers to variable every build
+    * install jq on gitlab runner (to get value from object):
+      * `ssh -i ~/Downloads/gitlab-runner-key.pem ubuntu@ec2-54-208-34-176.compute-1.amazonaws.com` - login
+      * `sudo apt-get install jq` - install
 
