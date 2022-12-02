@@ -27,3 +27,19 @@
   * Pull:
     * To only download the cache, but never upload the changes
     * Use when you have many jobs executing in parallel that use the same cache
+
+### Best Practise:
+* Not **depend** on cache to be available
+* Caching is an optimization, but it isn't guaranteed to always work
+
+### Configure Volume for Docker Executor:
+* in .gitlab-ci.yaml cache gets created inside the container on the Docker Runner
+* Job get executed inside a new Docker container
+* When the job finishes, the container is removed
+* Configure Volume:
+  * `$ sudo ls /etc/gitlab-runner/` - config.toml - the configuration file with 2 Runners
+  * `$ sudo vim /etc/gitlab-runner/config.toml` - to configure it with [VIM editor](https://sites.google.com/site/voipnotes/l/vim-editor-commands-1)
+    * [Useful Vim Commands on YouTube.com](https://www.youtube.com/watch?v=yfxRHSSGgSg)
+  * `cache_dir = "/cache"` - add same location to cache as volume directory
+  * `:wq` - Save the file
+
