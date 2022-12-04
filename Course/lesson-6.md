@@ -43,3 +43,16 @@
   * `cache_dir = "/cache"` - add same location to cache as volume directory
   * `:wq` - Save the file
 
+### Clear the Cache:
+* Manually with button "Clear runner caches"
+  * The old cache is not deleted
+  * Cache name will be updated and used instead
+  * Have to delete manually files from the Runner storage
+  * Format "cache-index", index is incremented by one
+* Change the value for the cache key in yml file
+
+* `$ docker volume ls` - reference to the physical location on this machine where cache is stored
+* `$ runner-ieinwck3-project-40450508-concurrent-0-cache-3c3f060a0374fc8bc39395164f415a70` - the location "/var/lib/docker/volumes/runner-ieinwck3-project-40450508-concurrent-0-cache-3c3f060a0374fc8bc39395164f415a70/_data"
+* `sudo ls /var/lib/docker/volumes/runner-ieinwck3-project-40450508-concurrent-0-cache-3c3f060a0374fc8bc39395164f415a70/_data/JavaScriptonit/mynodeapp-cicd-project` - path of the cache
+* [Where the caches are stored](https://docs.gitlab.com/ee/ci/caching/) - for Shell, Docker and Docker Machine
+* 
