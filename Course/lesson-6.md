@@ -54,5 +54,24 @@
 * `$ docker volume ls` - reference to the physical location on this machine where cache is stored
 * `$ runner-ieinwck3-project-40450508-concurrent-0-cache-3c3f060a0374fc8bc39395164f415a70` - the location "/var/lib/docker/volumes/runner-ieinwck3-project-40450508-concurrent-0-cache-3c3f060a0374fc8bc39395164f415a70/_data"
 * `sudo ls /var/lib/docker/volumes/runner-ieinwck3-project-40450508-concurrent-0-cache-3c3f060a0374fc8bc39395164f415a70/_data/JavaScriptonit/mynodeapp-cicd-project` - path of the cache
+  * `cache.zip` - cache file in every project folder main-4/main-3
 * [Where the caches are stored](https://docs.gitlab.com/ee/ci/caching/) - for Shell, Docker and Docker Machine
-* 
+
+### Configure SAST:
+* use `configure: - template: Jobs/SAST.gitlab-ci.yml` - adds GitLab configured file template
+* You can nest up to 100 includes
+* Position of include keyword is irrelevant
+
+### Configure File templates and Pipeline templates:
+* `SAST.gitlab-ci.yml` - file template
+* `.gitlab-ci.yml` - CI/CD workflow template
+  * [Examples of templates](https://gitlab.com/JavaScriptonit/multi-k8s/-/pipelines)
+
+
+### Resources:
+
+[OWASP: what-is-owasp-top-10](https://www.synopsys.com/glossary/what-is-owasp-top-10.html)\
+[List of available GitLab templates](https://gitlab.com/gitlab-org/gitlab/-/tree/master/lib/gitlab/ci/templates)\
+[include keyword](https://docs.gitlab.com/ee/ci/yaml/index.html#include)\
+[Include templates](https://docs.gitlab.com/ee/ci/yaml/index.html#includetemplate)\
+[SAST: application_security](https://docs.gitlab.com/ee/user/application_security/sast)
