@@ -67,9 +67,22 @@
 * `.gitlab-ci.yml` - CI/CD workflow template
   * [Examples of templates](https://gitlab.com/JavaScriptonit/multi-k8s/-/pipelines)
 
+### Multi-Stage Deployments:
+* Change docker-compose.yaml
+  * add variable ${DC_APP_PORT} to change ports
+* Rename deploy_to_dev stage
+  * From "deploy"
+* Add run_functional_tests stage
+  * Add abort command
+* Add deploy_to_staging stage
+  * Change variables and change port 4000
+* Add deploy_to_prod stage
+  * Change variables and change port 5000
+
+
+
 
 ### Resources:
-
 [OWASP: what-is-owasp-top-10](https://www.synopsys.com/glossary/what-is-owasp-top-10.html)\
 [List of available GitLab templates](https://gitlab.com/gitlab-org/gitlab/-/tree/master/lib/gitlab/ci/templates)\
 [include keyword](https://docs.gitlab.com/ee/ci/yaml/index.html#include)\
