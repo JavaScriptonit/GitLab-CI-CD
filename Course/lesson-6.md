@@ -70,13 +70,13 @@
 ### Multi-Stage Deployments:
 * Change docker-compose.yaml
   * add variable ${DC_APP_PORT} to change ports
-* Rename deploy_to_dev stage
+* Rename "deploy_to_dev" stage
   * From "deploy"
-* Add run_functional_tests stage
+* Add "run_functional_tests" stage
   * Add abort command
-* Add deploy_to_staging stage
+* Add "deploy_to_staging" stage
   * Change variables and change port 4000
-* Add deploy_to_prod stage
+* Add "deploy_to_prod" stage
   * Change variables and change port 5000
 
 
