@@ -78,7 +78,16 @@
   * Change variables and change port 4000
 * Add "deploy_to_prod" stage
   * Change variables and change port 5000
-
+* Add variables to not DUPLICATE the code:
+  * `extends: deploy` - to use deploy stage with variables for each stage (dev/staging/prod)
+  * use 5 variables:
+    * `SSH_PRIVATE_KEY`
+    * `SERVER_HOST`
+    * `DEPLOY_ENV`
+    * `APP_PORT`
+    * `ENDPOINT`
+* Hide extended jobs with "."
+  * Also comment with "#"
 
 
 
