@@ -81,13 +81,18 @@
 * Add variables to not DUPLICATE the code:
   * `extends: deploy` - to use deploy stage with variables for each stage (dev/staging/prod)
   * use 5 variables:
-    * `SSH_PRIVATE_KEY`
+    * `SSH_KEY`
     * `SERVER_HOST`
     * `DEPLOY_ENV`
     * `APP_PORT`
     * `ENDPOINT`
 * Hide extended jobs with "."
   * Also comment with "#"
+* Add Manual approval:
+  * `when: manual` - execute job only after user input
+* Fix GitLab bug with files variables:
+  * ` - echo $SSH_KEY | sed -e "s/-----BEGIN RSA PRIVATE KEY-----/&\n/" -e "s/-----END RSA PRIVATE KEY-----/\n&/" -e "s/\S\{64\}/&\n/g" > deploy-key.pem`
+    * echoing $SSH_KEY variable file and using string concatenation on it to use it's text
 
 
 
