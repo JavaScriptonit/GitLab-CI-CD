@@ -28,3 +28,7 @@
   * Switching between projects tedious
   * Searching, testing and debugging is more difficult
   * Sharing resources is more difficult
+
+### Monorepo - Start services locally and get to know the Application:
+
+* 
