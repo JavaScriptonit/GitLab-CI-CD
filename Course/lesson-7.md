@@ -29,6 +29,10 @@
   * Searching, testing and debugging is more difficult
   * Sharing resources is more difficult
 
-### Monorepo - Start services locally and get to know the Application:
-
-* 
+### Deploy Micro Services:
+* `.deploy script: docker network create micro_service || true &&`
+  * 1st time creates network and after creating next line fails. Use "|| true" not to fail
+* `docker network ls` - to check network in terminal CI
+  * `4c6d1367fe99   micro_service   bridge    local`
+* `docker inspect aa0194f7032d` - network config
+* `docker inspect aa0194f7032d | grep Network` - NetworkMode & NetworkSettings of frontend container aa0194f7032d
