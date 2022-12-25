@@ -36,3 +36,13 @@
   * `4c6d1367fe99   micro_service   bridge    local`
 * `docker inspect aa0194f7032d` - network config
 * `docker inspect aa0194f7032d | grep Network` - NetworkMode & NetworkSettings of frontend container aa0194f7032d
+
+### Clean runner from containers, images and network to have FRESH state with Docker and Docker-compose installed:
+* `docker images` - check images
+  * `docker rmi 9fc5b1ea74c7 0c6e70abf54f cd4727472014` - remove images
+* `docker ps` - check running containers
+  * `docker stop 9fc5b1ea74c7 9fc5b1ea74c7 9fc5b1ea74c7` - stop running containers
+* `docker ps -a` - check CONTAINERS
+  * `docker rm fe6e704938c4 ccd9a5509a62 4734755351ed` - remove containers
+* `docker network ls` - check
+  * `docker network rm micro_service` - remove
