@@ -46,3 +46,12 @@
   * `docker rm fe6e704938c4 ccd9a5509a62 4734755351ed` - remove containers
 * `docker network ls` - check
   * `docker network rm micro_service` - remove
+
+### 2 Templates Types: 
+* Pipeline templates
+  * e2e CI/CD workflow
+  * used by itself with no other .gitlab-ci.yml file
+* Job templates
+  * provides specific jobs
+  * included to CI/CD workflow
+
