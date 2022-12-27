@@ -54,4 +54,9 @@
 * Job templates
   * provides specific jobs
   * included to CI/CD workflow
+* include:
+  * `- local` - reference from same repository
+  * `- file` - reference from another private project (same GitLab instance)
+  * `- remote` - include from a different location (full URL necessary)
+  * `- template` - include GitLab's templates
 
