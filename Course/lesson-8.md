@@ -19,7 +19,7 @@
 * `kubectl cluster-info` - connect to cluster and get info from it
 
 
-### Cluster configuration:
+### Create dedicated user and permissions:
 * `kubectl create namespace my-micro-service` - create namespace
   * namespace/my-micro-service created
 * `kubectl create serviceaccount cicd-sa --namespace=my-micro-service` - create service account
@@ -29,4 +29,28 @@
   * role.rbac.authorization.k8s.io/cicd created
 * `kubectl create rolebinding cicd-rb --role=cicd-role --serviceaccount=my-micro-service:cicd-sa --namespace=my-micro-service` - bind role with rules
   * rolebinding.rbac.authorization.k8s.io/cicd-rb created
-* 
+
+### Create Kubeconfig file:
+* [Install kubectl and configure cluster access](https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-access-for-kubectl#default_cluster_kubectl)
+* [Install the Google Cloud CLI](https://cloud.google.com/sdk/docs/install-sdk)
+* `cp ~/Downloads/kubeconfig.yaml ~/cicd-kubeconfig.yaml` - copy kubeconfig file
+* `vim cicd-kubeconfig.yaml` - replace values (admin user) and token
+  * `kubectl get serviceaccount -n my-micro-service` - get serviceaccount name and created secret with token
+  * `kubectl get serviceaccount cicd-sa -n my-micro-servce -o yaml` - get serviceaccount secret name
+  * `kubectl get secret cicd-sa-token-4fkgn -n my-micro-servce -o yaml` - get full secret value with token
+  * `echo "cicd-sa-token-4fkgn token value" | base64 -D` - decode command
+* `export KUBECONFIG=cicd-kubeconfig.yaml` - to get new permissions
+  * `kubectl get namespace` - to test new permissions (should be forbidden)
+  * `kubectl get service -n my-micro-service` - to test new permissions (should be not forbidden)
+* ADD variable to a group of projects [mymicroservice-cicd](https://gitlab.com/groups/mymicroservice-cicd33/-/settings/ci_cd)
+#### [Manually create an API token for a ServiceAccount:](https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/)
+* `kubectl create token build-robot` - The output from that command is a token that you can use to authenticate as that ServiceAccount
+
+
+
+### Resources:
+
+[Configure ServiceAccount](https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account)\
+[Namespaces](https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/)\
+[Namespaces explained by Nana](https://youtu.be/K3jNo4z5Jx8)\
+[Role for giving permissions](https://kubernetes.io/docs/reference/access-authn-authz/rbac/#role-and-clusterrole)
