@@ -14,4 +14,4 @@ GitLabCICD.iml
 
 # AWS secret files
 /Course/AWS/new_user_credentials.csv
-/Course/AWS/gitlab-runner-key.pem
+/Course/AWS/gitlab-runner/gitlab-runner-key.pem

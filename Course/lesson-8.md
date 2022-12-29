@@ -46,6 +46,27 @@
 #### [Manually create an API token for a ServiceAccount:](https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/)
 * `kubectl create token build-robot` - The output from that command is a token that you can use to authenticate as that ServiceAccount
 
+### Difference between Docker-compose and Kubernetes:
+* change Dockerfile
+  * not using Docker network: ENV PRODUCTS_SERVICE="products_app_1"
+  * using services: ENV PRODUCTS_SERVICE="products"
+* change deploy job:
+  * [new file](https://techworld-with-nana.teachable.com/courses/1769488/lectures/39917368)
+* use `$ envsubst` command for searching the input for pattern $VARIABLE or ${VARIABLE}. 
+  * check envsubst command in terminal (ssh GitLab Runner) to work
+  * [install envsubst tool if it is not working](https://command-not-found.com/envsubst)
+Then, it replaces the pattern with the value of the corresponding bash variable
+* `$ kubectl create secret <secret type> <secret name>` - create secret command
+  * `kubectl create secret docker-registry my-registry-key --docker-server=$CI_REGISTRY --docker-username=$GITLAB_USER --docker-password=$GITLAB_PASSWORD -n my-micro-service --dry-run=client -o yaml | kubectl apply -f`
+* install kubectl packages on gitlab-runner
+  * list of commands: `/GitLab-CI-CD/Course/AWS/gitlab-runner/k8s-deploy.md`
+* run pipeline with configured files in frontend project with working cluster
+* check running cluster in terminal:
+  * `$ kubectl get service -n my-micro-service`
+  * `$ kubectl get deployment -n my-micro-service`
+  * `$ kubectl get pod -n my-micro-service`
+* `kubectl port-forward service/frontend -n my-micro-service 3000:3000` - to set port for frontend
+  * for test purpose without Ingress and LoadBalancer configuration
 
 
 ### Resources:
