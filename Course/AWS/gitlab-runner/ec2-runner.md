@@ -25,6 +25,7 @@ pre steps:
 ### Register new Runner:
 * `$ sudo apt install docker.io` - install Docker on EC2
 * `$ sudo docker ps` - use "sudo" to run Docker commands after install Docker
+* `$ sudo groupadd docker` - create the docker group
 * `$ sudo usermod -aG docker $USER` - [Add your user to the docker group](https://docs.docker.com/engine/install/linux-postinstall/)
 * `$ exit` - necessary to restart the virtual machine for changes to take effect
 
